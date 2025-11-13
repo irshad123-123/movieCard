@@ -1,0 +1,62 @@
+.card{
+    overflow: hidden;
+}
+.card .fig {
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+}
+.fig img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    position: relative;
+    overflow: hidden;
+}
+.overview{
+    position: absolute;
+    bottom:0;
+    z-index: 5;
+    background-color:rgb(139, 68, 232);
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+}
+.overview .col-9 strong{
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px !important;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+.overview span{
+    padding: 8px;
+    font-size: 20px;
+    margin-left: 25px;
+}
+.content {
+  position: absolute;
+  top: 30%;
+  bottom: 55px; 
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.fig:hover .content {
+  transform: scale(1);
+}
+
+.content .para {
+  overflow-y: auto; 
+  flex: 1; 
+  font-size: 14px;
+  color: #333;
+}
