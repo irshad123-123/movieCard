@@ -1,31 +1,24 @@
-<div class="row">
-    <div class="col-md-4 mb-3" *ngFor='let movies of forMovieArr'>
-        <div class="card h-100">
-            <div class="fig">
-                    <img src="{{baseUrl + (movies.backdrop_path || movies.poster_path)}}"
-                        alt="{{movies.title || movies.original_title}}"
-                        title="{{movies.title || movies.original_title}}">
-                 <figcaption class="overview d-flex">
-                    <div class="col-9">
-                        <strong>{{movies.title || movies.original_title}}</strong>
-                    </div>
-                    <div class="col-3 text-right">
-                        <span class="badge" 
-                        [ngClass] = "{
-                            'badge-success' : movies.vote_average >=7,
-                            'badge-warning' : movies.vote_average > 5 && movies.vote_average < 7,
-                            'badge-danger' : movies.vote_average < 5
-                        }"
-                        >{{movies.vote_average}}</span>
-                    </div>
-                 </figcaption>
-                 <div class="content">
-                    <p class="para">
-                        <strong>{{movies.title || movies.original_title}}</strong>
-                        {{movies.overview}}
-                    </p>
-                 </div>
+<div class="card h-100">
+    <div class="fig">
+        <img src="{{baseUrl + (movie.backdrop_path || movie.poster_path)}}"
+            alt="{{movie.title || movie.original_title}}" title="{{movie.title || movie.original_title}}">
+        <figcaption class="overview d-flex">
+            <div class="col-9">
+                <strong>{{movie.title || movie.original_title}}</strong>
             </div>
+            <div class="col-3 text-right">
+                <span class="badge" [ngClass]="{
+                            'badge-success' : movie.vote_average >=7,
+                            'badge-warning' : movie.vote_average > 5 && movie.vote_average < 7,
+                            'badge-danger' : movie.vote_average < 5
+                        }">{{movie.vote_average}}</span>
+            </div>
+        </figcaption>
+        <div class="content">
+            <p class="para">
+                <strong>{{movie.title || movie.original_title}}</strong>
+                {{movie.overview}}
+            </p>
         </div>
     </div>
 </div>

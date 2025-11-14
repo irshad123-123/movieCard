@@ -1,3 +1,5 @@
-<app-movies-card
-[forMovieArr] = 'moviesArr'
-></app-movies-card>
+<div class="row">
+    <div class="col-md-4 mb-3" *ngFor='let movie of moviesArr'>
+        <app-movies-card [movie]='movie'></app-movies-card>
+    </div>
+</div>

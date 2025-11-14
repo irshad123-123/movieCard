@@ -7,7 +7,7 @@ import { Imovies } from '../../models/movies';
   styleUrls: ['./movies-card.component.scss']
 })
 export class MoviesCardComponent implements OnInit {
-  @Input() forMovieArr! : Array<Imovies>
+  @Input() movie! : Imovies
   baseUrl :string = 'https://image.tmdb.org/t/p/w500/'
   constructor() { }
 
